@@ -1,0 +1,145 @@
+
+
+.search-container {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #343a40;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 2px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #61dafb;
+}
+
+button.submit-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #6d5dfc, #46aef7);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button.submit-button:hover {
+  background: linear-gradient(135deg, #46aef7, #6d5dfc);
+  transform: translateY(-3px);
+}
+
+button.submit-button:disabled {
+  background-color: #cccccc;
+}
+
+.results-container {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #343a40;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.autocomplete-list {
+  list-style: none;
+  padding: 0;
+  border-radius: 10px;
+  background: yellowgreen;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  max-height: 150px;
+  width: 100%;
+  position: absolute;
+  overflow-y: auto; /* Dikey kaydırma çubuğunu etkinleştir */
+  z-index: 10;
+}
+
+.autocomplete-list li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.autocomplete-list li:hover {
+  background-color: #f1f3f5;
+}
+
+.flight-info {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.book-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #218838;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    padding: 15px;
+  }
+
+  button.submit-button {
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.toast-error {
+  background-color: #ff4444 !important; /* Kırmızı arka plan */
+  color: white !important;
+  font-weight: bold;
+}
+
+.toast-bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+

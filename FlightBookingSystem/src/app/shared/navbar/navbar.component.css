@@ -1,0 +1,48 @@
+/* Navbar Stilleri */
+.navbar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-left:1420px; /* Otomatik marginler ile ortalama */
+  font-weight: 800;
+  font-size: 1.5rem;
+
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-grow: 1; 
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 1.5rem;
+ 
+}
+
+.nav-link {
+  color: #161414;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer; 
+}
+
+.nav-link:hover {
+  background-color: #5deaf1;
+}
+
+.navbar-nav .auth-links {
+  margin-left: auto; /* Sağ tarafa hizalamak için */
+}

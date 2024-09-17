@@ -1,0 +1,133 @@
+/* Hero Section */
+.hero-section {
+  background-image: url('/assets/images/plane2.jpg'); /* Bir arka plan görseli kullanın */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Saydam bir kutu */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  margin: 10px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-search {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+  background-color: #ff4b4b;
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.feature h2 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background-color: #ff6b6b;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cta-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn-cta {
+  background-color: white;
+  color: #ff6b6b;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-cta:hover {
+  background-color: #ffdada;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,37 @@
+  <div class="admin-dashboard">
+    <h1>Admin Dashboard</h1>
+
+    <button class="btn btn-primary" (click)="onCreateFlight()">Create New Flight</button>
+
+    <div class="table-container">
+      <table class="flight-table">
+        <thead>
+          <tr>
+            <th>Flight ID</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Price</th>
+            <th>Capacity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of flights">
+            <td>{{ flight.id }}</td>
+            <td>{{ flight.departure }}</td>
+            <td>{{ flight.arrival }}</td>
+            <td>{{ flight.date | date }}</td>
+            <td>{{ flight.date | date: 'shortTime'}}</td>
+            <td>{{ flight.capacity }}</td>
+            <td>{{ flight.price | currency }}</td>
+            <td>
+              <button class="btn btn-secondary" (click)="onEditFlight(flight)">Edit</button>
+              <button class="btn btn-danger" (click)="cancelFlight(flight.id)">Cancel</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

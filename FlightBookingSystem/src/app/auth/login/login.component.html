@@ -1,0 +1,32 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Giriş Yap</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <mat-form-field appearance="fill">
+          <mat-label>email</mat-label>
+          <input matInput type="text" id="email" name="email" [(ngModel)]="email" required />
+          <mat-error *ngIf="loginForm.form.get('email')?.hasError('required')">
+            Email gereklidir.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Şifre</mat-label>
+          <input matInput type="password" id="password" name="password" [(ngModel)]="password" required />
+          <mat-error *ngIf="loginForm.form.get('password')?.hasError('required')">
+            Şifre gereklidir
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">
+          Giriş Yap
+        </button>
+
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

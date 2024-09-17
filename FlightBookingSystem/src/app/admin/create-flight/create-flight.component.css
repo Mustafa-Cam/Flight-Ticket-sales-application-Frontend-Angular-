@@ -1,0 +1,154 @@
+/* General container styling */
+.create-flight {
+  max-width: 700px;
+  margin: 50px auto; /* Orta konumlandırma ve üstten boşluk */
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Heading styling */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form group styling */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #444;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input field focus styling */
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Autocomplete list styling */
+.autocomplete-list {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  max-height: 180px;
+  overflow-y: auto;
+  position: absolute;
+  width: calc(100% - 24px); /* Adjusted width for padding */
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+}
+
+/* Autocomplete list item styling */
+.autocomplete-list li {
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Autocomplete list item hover effect */
+.autocomplete-list li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Error message styling */
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Button styling */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Button hover effect */
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Button focus effect */
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.styled-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.styled-checkbox:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.styled-checkbox:checked::after {
+  content: '\2714'; /* Checkmark */
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox-label {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+

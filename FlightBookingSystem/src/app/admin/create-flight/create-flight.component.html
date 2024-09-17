@@ -1,0 +1,82 @@
+<div class="create-flight">
+  <h2 *ngIf="!flightId">Create New Flight</h2>
+  <h2 *ngIf="flightId">Update Flight</h2>
+
+  <form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="Departure">Departure :</label>
+      <input
+        type="text"
+        id="Departure"
+        formControlName="Departure"
+        required
+        minlength="3"
+        placeholder="Kalkış yeri girin"
+      />
+      <ul *ngIf="filteredDepartureCities.length > 0" class="autocomplete-list">
+        <li *ngFor="let city of filteredDepartureCities" (click)="selectDeparture(city)">
+          {{ city }}
+        </li>
+      </ul>
+      <div *ngIf="flightForm.get('Departure')?.invalid && (flightForm.get('Departure')?.dirty || flightForm.get('Departure')?.touched)" class="error-message">
+        <small *ngIf="flightForm.get('Departure')?.errors?.['required']">Kalkış yeri zorunludur.</small>
+        <small *ngIf="flightForm.get('Departure')?.errors?.['minlength']">En az 3 karakter olmalıdır.</small>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="Arrival">Varış Yeri:</label>
+      <input
+        type="text"
+        id="Arrival"
+        formControlName="Arrival"
+        required
+        minlength="3"
+        placeholder="Varış yeri girin"
+      />
+      <ul *ngIf="filteredArrivalCities.length > 0" class="autocomplete-list">
+        <li *ngFor="let city of filteredArrivalCities" (click)="selectArrival(city)">
+          {{ city }}
+        </li>
+      </ul>
+      <div *ngIf="flightForm.get('Arrival')?.invalid && (flightForm.get('Arrival')?.dirty || flightForm.get('Arrival')?.touched)" class="error-message">
+        <small *ngIf="flightForm.get('Arrival')?.errors?.['required']">Varış yeri zorunludur.</small>
+        <small *ngIf="flightForm.get('Arrival')?.errors?.['minlength']">En az 3 karakter olmalıdır.</small>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="Date">Date</label>
+      <input type="date" id="Date" formControlName="Date" />
+    </div>
+    
+    <div class="form-group">
+      <label for="Time">Time</label>
+      <input type="time" id="Time" formControlName="Time" />
+    </div>
+
+    <div class="form-group">
+      <label for="Capacity">Capacity</label>
+      <input type="number" id="Capacity" formControlName="Capacity" />
+    </div>
+    
+    <div class="form-group">
+      <label for="Price">Price</label>
+      <input type="number" id="Price" formControlName="Price" placeholder="Enter ticket Price" />
+    </div>
+
+    <div class="form-group">
+      <label for="IsActive" class="checkbox-label">IsActive</label>
+      <input
+        type="checkbox"
+        id="IsActive"
+        formControlName="IsActive"
+        class="styled-checkbox"
+      />
+    </div>
+    
+    <!-- Eğer flightId varsa güncelle butonu, yoksa submit butonu gösterilir -->
+    <button class="btn btn-primary" type="submit" *ngIf="!flightId">Submit</button>
+    <button class="btn btn-primary" type="submit" *ngIf="flightId">Update</button>
+  </form>
+</div>

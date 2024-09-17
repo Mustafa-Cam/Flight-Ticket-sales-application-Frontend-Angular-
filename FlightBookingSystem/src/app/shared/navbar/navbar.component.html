@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/client">Uçak Bilet Satışı</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin" *ngIf="authService.isAdmin() && authService.isAuthenticated()">Admin Paneli</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/client/flightsearch">Uçuşlar</a>
+      </li>
+      <li class="auth-links">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="!authService.isAuthenticated()" routerLink="/auth">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="!authService.isAuthenticated()" routerLink="/auth/register">Register</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item" *ngIf="authService.isAuthenticated()">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
